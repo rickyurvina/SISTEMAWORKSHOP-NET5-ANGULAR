@@ -1,0 +1,140 @@
+<mat-card class="mat-elevation-z8 content">
+  <mat-card-header>
+    <mat-card-title>Create Workshop</mat-card-title>
+    <mat-card-subtitle>
+      <p>&nbsp;</p>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="card-content">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+        <mat-error *ngIf="workshopInvalid">
+          There was a problem trying to record the workshop
+        </mat-error>
+        <div fxLayout="column" fxLayoutAlign="start stretch" class="body-content">
+          <div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="64px" class="p-b-12">
+            <div fxFlex="80">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Title" [(ngModel)]="workshop.Title" formControlName="title" required>
+                <mat-error>Please provide a valid title</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="20">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Category</mat-label>
+                <mat-select [(ngModel)]="workshop.CategoryId" formControlName="categoryId" required>
+                  <mat-option *ngFor="let category of categories" [value]="category.CategoryId">{{category.Description}}</mat-option>
+                </mat-select>
+                <mat-error>Please provide a valid category</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="64px" class="p-b-12">
+            <div fxFlex="100">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Description" [(ngModel)]="workshop.Description" formControlName="description" required></textarea>
+                <mat-error>Please provide a valid description</mat-error>
+              </mat-form-field>
+            </div>            
+          </div>
+
+          <div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="64px" class="p-b-12">
+            <div fxFlex>
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Instructor</mat-label>
+                <input type="hidden" [(ngModel)]="workshop.InstructorId" formControlName="instructorId" required>
+                <input matInput placeholder="Instructor" readonly [(ngModel)]="workshop.Instructor.FullName" formControlName="instructorFullName" required>
+                <a mat-button matSuffix mat-icon-button (click)="btnInstructorOnClick($event)">
+                  <mat-icon>person_search</mat-icon>
+                </a>
+                <mat-error>Please provide a valid instructor</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="150px">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Start Date</mat-label>
+                <input matInput [matDatepicker]="pickerStartDate" readonly [(ngModel)]="workshop.StartDate" formControlName="startDate" required>
+                <mat-datepicker-toggle matSuffix [for]="pickerStartDate">
+                  <mat-icon matDatepickerToggleIcon>event</mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #pickerStartDate disabled="false"></mat-datepicker>
+                <mat-error>Please provide a valid start date</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="150px" fxLayout="row" fxLayoutAlign="space-between stretch" style="position:relative">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>Start Time</mat-label>
+                <input matInput placeholder="Start Time" [ngxTimepicker]="pickerStartTime" [format]="24" [disableClick]="true" readonly [(ngModel)]="workshop.StartTimeString" formControlName="startTime" required>
+                <mat-error>Please provide a valid start time</mat-error>
+              </mat-form-field>
+              <div style="position:absolute;right:0px;bottom:32px;">
+                <ngx-material-timepicker-toggle [for]="pickerStartTime">
+                  <svg _ngcontent-lsy-c39="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px" class="ng-star-inserted" ngxMaterialTimepickerToggleIcon>
+                    <path _ngcontent-lsy-c39="" d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003                   6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.430123 16.430123 20 12 20 C 7.5698774 20 4 16.430123 4 12 C 4 7.5698774 7.5698774 4 12 4 z M 11 6 L 11 12.414062 L 15.292969 16.707031 L 16.707031 15.292969 L 13 11.585938 L 13 6 L 11 6 z"></path>
+                  </svg>
+                </ngx-material-timepicker-toggle>
+                <ngx-material-timepicker #pickerStartTime></ngx-material-timepicker>
+              </div>
+            </div>
+            <div fxFlex="20">
+              <mat-form-field class="full-width-input" appearance="outline">
+                <mat-label>State</mat-label>
+                <mat-select [(ngModel)]="workshop.WorkshopStateId" formControlName="workshopStateId" required>
+                  <mat-option *ngFor="let workshopState of workshopStates" [value]="workshopState.WorkshopStateId">{{workshopState.Description}}</mat-option>
+                </mat-select>
+                <mat-error>Please provide a valid state</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="64px" class="p-b-12">
+            <div fxFlex="50">
+              <mat-form-field appearance="outline">
+                <mat-label>Cover</mat-label>
+                <input matInput [(ngModel)]="workshop.CoverFileData.FileName" readonly formControlName="coverFileName" required />
+                <button mat-flat-button matSuffix color="primary" class="btnUpload">
+                  Browse File
+                </button>
+                <input type="file" class="uploadFile" (change)="uploadFileEvt($event,'cover')" accept="image/*" />
+                <mat-error>Please provide a valid cover</mat-error>
+              </mat-form-field>
+            </div>
+            <div fxFlex="50">
+              <mat-form-field appearance="outline">
+                <mat-label>Agenda</mat-label>
+                <input matInput [(ngModel)]="workshop.AgendaFileData.FileName" readonly formControlName="agendaFileName" required />
+                <button mat-flat-button matSuffix color="primary" class="btnUpload">
+                  Browse File
+                </button>
+                <input type="file" class="uploadFile" (change)="uploadFileEvt($event,'agenda')" accept="application/vnd.ms-powerpoint,application/pdf" />
+                <mat-error>Please provide a valid agenda</mat-error>
+              </mat-form-field>
+              <p>Allowed format: PDF / PPT - Maximum size 15MB</p>
+            </div>
+          </div>
+          <div fxFlex fxLayout="row" fxLayoutAlign="space-between stretch" fxLayoutGap="64px" class="p-b-12">
+            <div fxFlex="50">
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>Preview</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="imgCoverWrap">
+                    <img [src]="workshop.CoverFileData.SafeResourceUrl" class="imgCover">
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <div fxFlex="50" fxLayout="column" fxLayoutAlign="end end" fxLayoutGap="16px">
+              <div fxLayoutGap="16px">
+                <a mat-raised-button (click)="btnCancelOnclick($event)"><mat-icon class="p-r-12">cancel</mat-icon><span>Cancel</span></a>
+                <button mat-raised-button color="primary"><mat-icon class="p-r-12">save</mat-icon><span>Save</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </mat-card-content>  
+</mat-card>

@@ -1,0 +1,68 @@
+.content {
+  height: 100%;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+.title {
+  padding-left: 24px;
+  font-size: 35px;
+  /*padding-top: 18px;*/
+  cursor:pointer;
+  margin-bottom:0px;
+  line-height:36px;
+}
+
+.card {
+  height: 100%;
+  padding: 0px;
+}
+
+.details{
+    padding:32px;
+}
+
+.wrap-img {
+  height: 300px;
+  background-color: #808080;
+  position: relative;
+}
+
+.img{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  width:100%;
+}
+
+.description{
+    text-align:justify;
+    font-size:18px;
+    line-height:24px;
+}
+
+.label{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.instructor {
+  font-size: 18px;
+}
+
+.actions{
+    width:100%;
+}
+
+.btnDownload {
+  background-color: #c6a664;
+  color:#ffffff;  
+}
+
+.btnEnrollment {
+  //background-color: #000000;
+  color: #19a833;
+}

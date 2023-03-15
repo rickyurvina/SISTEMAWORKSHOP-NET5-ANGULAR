@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item [routerLinkActive]="['is-active']" routerLink="/workshop-manager/workshops" (click)="onSidenavClose()">
+    <mat-icon>auto_stories</mat-icon><span class="nav-caption">Workshops</span>
+  </mat-list-item>
+  <mat-list-item [routerLinkActive]="['is-active']" routerLink="/workshop-manager/enrollments" (click)="onSidenavClose()">
+    <mat-icon>people_alt</mat-icon><span class="nav-caption">Enrollments</span>
+  </mat-list-item>
+  <mat-list-item [routerLinkActive]="['is-active']" routerLink="/workshop-manager/reports" (click)="onSidenavClose()">
+    <mat-icon>insert_chart_outlined</mat-icon><span class="nav-caption">Reports</span>
+  </mat-list-item>
+</mat-nav-list>

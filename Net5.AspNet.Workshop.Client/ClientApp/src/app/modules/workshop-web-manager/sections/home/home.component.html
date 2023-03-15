@@ -1,0 +1,56 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" class="content">
+  <div fxLayout="row" fxLayoutAlign="space-between none" fxLayoutGap="24px">
+    <div fxFlex="50">
+      <mat-form-field class="full-width-input" appearance="outline">
+        <mat-label>Workshop</mat-label>
+        <input matInput placeholder="Workshop" [(ngModel)]="filter.Title" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+    </div>
+    <div fxFlex="50">
+      <mat-form-field class="full-width-input" appearance="outline">
+        <mat-label>Instructor</mat-label>
+        <input matInput placeholder="Instructor" [matAutocomplete]="autoInstructor" [(ngModel)]="filter.Instructor" [formControl]="instructorControl">
+        <mat-autocomplete autoActiveFirstOption #autoInstructor="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let instructor of filteredInstructors | async" [value]="instructor">
+            {{instructor.FullName}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="24px">
+    <div fxFlex="50" fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="24px">
+      <mat-form-field class="full-width-input" appearance="outline">
+        <mat-label>Start Date</mat-label>
+        <input matInput [matDatepicker]="pickerStartDate" readonly [(ngModel)]="filter.StartDate" [ngModelOptions]="{standalone: true}">
+        <mat-datepicker-toggle matSuffix [for]="pickerStartDate">
+          <mat-icon matDatepickerToggleIcon>event</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerStartDate disabled="false"></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="full-width-input" appearance="outline">
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="pickerEndDate" readonly [(ngModel)]="filter.EndDate" [ngModelOptions]="{standalone: true}">
+        <mat-datepicker-toggle matSuffix [for]="pickerEndDate">
+          <mat-icon matDatepickerToggleIcon>event</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #pickerEndDate disabled="false"></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div fxFlex="50" fxLayout="row" fxLayoutAlign="end start" fxLayoutGap="12px" class="p-t-16">
+      <button mat-raised-button color="primary" (click)="btnTodayOnClick($event)"><mat-icon class="">today</mat-icon><span>Today</span></button>
+      <button mat-raised-button color="primary" (click)="btnWeekOnClick($event)"><mat-icon class="">calendar_view_week</mat-icon><span>This Week</span></button>
+      <button mat-raised-button color="primary" (click)="btnMonthOnClick($event)"><mat-icon class="">calendar_view_month</mat-icon><span>This Month</span></button>
+      <button mat-raised-button (click)="btnSearchOnClick($event)"><mat-icon class="">search</mat-icon><span>search</span></button>
+    </div>
+  </div>
+  <div fxFlex fxLayoutGap="24px" fxLayout="column" fxLayoutAlign="space-between stretch" class="">
+    <div *ngFor="let workshopRows of workshops" class="p-t-16">
+      <div fxFlex fxLayoutGap="24px" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <div *ngFor="let workshop of workshopRows">
+          <app-workshop-card [workshop]="workshop"></app-workshop-card>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>

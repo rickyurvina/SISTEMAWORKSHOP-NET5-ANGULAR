@@ -1,0 +1,27 @@
+<div class="wrap">
+  <mat-card class="card mat-elevation-z8">
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" class="content">
+      <div fxFlex="50" class="wrap-img">
+        <!--<img src="https://cdn.mindmajix.com/courses/microservices-architecture-training.png" class="img" />-->
+        <img src="https://localhost:44322/api/FileDatum/{{workshop.CoverFileData.FileDataId}}/GetFile" class="img" />
+      </div>
+      <div fxFlex="50" fxLayout="column" fxLayoutAlign="space-between stretch" class="details" >
+        <div fxFlex="20">
+          <h3 class="t-a-c">{{workshop.Title.substring(0,27)}}{{workshop.Title.length>30?"...":""}}</h3>
+        </div>
+        <div fxFlex="20" fxLayout="column" fxLayoutAlign="start stretch">
+          <button mat-raised-button color="primary" style="cursor:auto;"><mat-icon>today</mat-icon><span> Day {{workshop.StartDate|date:'dd/MM/yyyy'}} </span></button>
+        </div>
+        <div fxFlex="20" fxLayout="column" fxLayoutAlign="start stretch">
+          <button mat-raised-button color="primary" style="cursor:auto;"><mat-icon class="t-a-r">schedule</mat-icon><span> Hour {{workshop.StartTimeString}} hrs </span></button>
+        </div>
+        <div fxFlex="20">
+          <p class="t-a-c instructor">Instructor: {{workshop.Instructor.FullName}}</p>
+        </div>
+        <div fxFlex="20" fxLayout="column" fxLayoutAlign="start stretch">
+          <button mat-raised-button color="primary" class="btnInformation" routerLink="/workshop-web-manager/workshops/{{workshop.WorkshopId}}"><span> Information </span></button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

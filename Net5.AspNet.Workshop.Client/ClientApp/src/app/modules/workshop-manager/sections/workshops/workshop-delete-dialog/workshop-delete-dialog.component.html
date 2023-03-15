@@ -1,0 +1,31 @@
+<div class="titleDialog">
+  <button mat-raised-button color="primary" class="btnClose" (click)="btnCloseOnClick()"><mat-icon>close</mat-icon></button>
+  <div class="titleTextDialog">
+    <h2>Delete workshop</h2>
+  </div>
+</div>
+<div class="contentDialog">
+  <mat-card class="mat-elevation-z content">
+    <mat-card-header>
+      <mat-card-title></mat-card-title>      
+    </mat-card-header>
+    <mat-card-content>
+      <div class="card-content">
+        <form class="form">
+          <div fxLayout="column" fxLayoutAlign="start stretch" class="body-content">
+            <div>
+              <p class="t-a-c">Do you want to remove the "{{message}}" workshop?</p>
+            </div>
+            <div class="divider">
+              <mat-divider></mat-divider>
+            </div>            
+            <div fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="16px">
+              <button mat-raised-button (click)="btnDeleteOnClick()" color="warn"><mat-icon class="p-r-12">delete</mat-icon><span>Delete</span></button>
+              <button mat-raised-button (click)="btnCloseOnClick()"><mat-icon class="p-r-12">cancel</mat-icon><span>Cancel</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

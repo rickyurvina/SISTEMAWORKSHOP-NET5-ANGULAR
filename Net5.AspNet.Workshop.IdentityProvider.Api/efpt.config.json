@@ -1,0 +1,84 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "SecurityContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Infrastructure\/Data\/Contexts",
+   "OutputPath": "Infrastructure\/Data\/Entities",
+   "ProjectRootNamespace": "Net5.AspNet.Workshop.IdentityProvider.Api",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[Security].[RoleClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[UserClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[UserLogins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[UserRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[Users]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Security].[UserTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Address]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Department]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[District]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Person]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Province]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "00ea6c046e26.Net5.AspNet.Workshop.Database",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

@@ -1,0 +1,107 @@
+<div fxLayout="column">
+  <div fxFlexOffset="0px"></div>
+  <div fxFlexOffset="none">
+    <mat-card class="mat-elevation-z0">
+      <h1 class="header">Register user</h1>
+      <mat-card-header>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <mat-error *ngIf="signUpInvalid">
+            The username and password were not recognised
+          </mat-error>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" [(ngModel)]="user.FirstName" formControlName="firstName" required>
+            <mat-error>
+              Please provide a valid First Name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" [(ngModel)]="user.LastName" formControlName="lastName" required>
+            <mat-error>
+              Please provide a valid Last Name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Sur Name</mat-label>
+            <input matInput placeholder="Sur Name" [(ngModel)]="user.SurName" formControlName="surName" required>
+            <mat-error>
+              Please provide a valid Sur Name
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Identification Number</mat-label>
+            <input matInput placeholder="Identification Number" [(ngModel)]="user.IdentificationNumber" formControlName="identificationNumber" required>
+            <mat-error>
+              Please provide a valid Identification Number
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input matInput placeholder="User Name" [(ngModel)]="user.UserName" formControlName="username" required>
+            <mat-error>
+              Please provide a valid user
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>E-Mail</mat-label>
+            <input matInput type="email" placeholder="E-Mail" [(ngModel)]="user.Email" formControlName="email" required>
+            <mat-error>
+              Please provide a valid E-Mail
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="Phone" [(ngModel)]="user.Phone" formControlName="phone" required>
+            <mat-error>
+              Please provide a valid Phone
+            </mat-error>
+          </mat-form-field>
+
+          <div class="full-width-input t-a-l"><strong>Address</strong></div>
+
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Department</mat-label>            
+            <mat-select [(ngModel)]="user.Address.DepartmentId" formControlName="departmentId" (selectionChange)="onChangeSelDepartment($event)" required>
+              <mat-option *ngFor="let department of departments" [value]="department.DepartmentId">{{department.Description}}</mat-option>
+            </mat-select>
+            <mat-error>
+              Please provide a valid Department
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Province</mat-label>
+            <mat-select [(ngModel)]="user.Address.ProvinceId" formControlName="provinceId" (selectionChange)="onChangeSelProvince($event)" required>
+              <mat-option *ngFor="let province of provinces" [value]="province.ProvinceId">{{province.Description}}</mat-option>
+            </mat-select>
+            <mat-error>
+              Please provide a valid Province
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>District</mat-label>
+            <mat-select [(ngModel)]="user.Address.DistrictId" formControlName="districtId" required>
+              <mat-option *ngFor="let district of districts" [value]="district.DistrictId">{{district.Description}}</mat-option>
+            </mat-select>
+            <mat-error>
+              Please provide a valid District
+            </mat-error>
+          </mat-form-field>
+
+          <div fxLayout="row" class="options">
+            <div fxFlex="50">
+            </div>
+            <div fxFlex="50" class="t-a-r txtLogin">
+              <a routerLink="/security-manager/login">Login</a>
+            </div>
+          </div>
+          <button mat-raised-button color="primary" class="btnSignUp">Sign Up</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+</div>

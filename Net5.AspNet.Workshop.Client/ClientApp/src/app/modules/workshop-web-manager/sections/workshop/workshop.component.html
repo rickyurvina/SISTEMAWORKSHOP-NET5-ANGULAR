@@ -1,0 +1,42 @@
+<div fxLayout="column" fxLayoutAlign="space-between stretch" class="content">
+  <div fxLayout="row" fxLayoutAlign="start none" >
+    <button mat-fab color="basic" routerLink="/workshop-web-manager/home">
+      <mat-icon>arrow_back_ios_new</mat-icon>
+    </button>
+    <p class="title" routerLink="/workshop-web-manager/home">{{workshop.Title}}</p>
+  </div>
+  <div class="wrap-card p-t-64">
+    <mat-card class="card mat-elevation-z8">
+      <div fxLayout="row" fxLayoutAlign="space-between stretch">
+        <div fxFlex="350px">
+          <div class="wrap-img">
+            <img [src]="workshop.CoverFileData.SafeResourceUrl" class="img" />
+          </div>
+        </div>
+        <div fxFlex class="details" fxLayout="column" fxLayoutAlign="space-between stretch">
+          <div fxFlex="50">
+            <p class="description">{{workshop.Description}}</p>
+          </div>
+          <div fxFlex="25" fxLayout="row" fxLayoutAlign="start stretch">
+            <p class="label">Instructor :&nbsp;</p>
+            <p class="instructor">{{workshop.Instructor.FullName}}</p>
+          </div>
+          <div fxFlex="25" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="33">
+              <button mat-raised-button color="primary" style="cursor:auto"><mat-icon>today</mat-icon><span> Day {{workshop.StartDate|date:'dd/MM/yyyy'}} </span></button>
+            </div>
+            <div fxFlex="33">
+              <button mat-raised-button color="primary" style="cursor:auto"><mat-icon class="t-a-r">schedule</mat-icon><span> Hour {{workshop.StartTimeString}} hrs </span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="actions p-t-64">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <button mat-raised-button class="btnDownload" (click)="btnDownloadOnClick($event)"><mat-icon>download_for_offline</mat-icon><span> Download Agenda </span></button>      
+        <button mat-raised-button color="primary" (click)="btnEnrollmentMeUpOnClick($event)" [disabled]="!(applicationStateService.getIsloggedIn() && enrollmentsByEnrollee.length == 0)"><mat-icon class="t-a-r btnEnrollment">login</mat-icon><span> {{(enrollmentsByEnrollee.length>0)?"You are already registered":"Enrollment me up"}} </span></button>      
+    </div>
+  </div>
+</div>

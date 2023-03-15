@@ -1,0 +1,55 @@
+.full-width-input {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  min-width: 1000px;
+}
+
+th {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.table-container {
+  position: relative;
+  overflow: auto;
+  height: calc(100% - 56px);
+}
+
+.table-container-wrap {
+  height: calc(100% - 247px);
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+mat-card {
+  height: calc(100% - 34px);
+}
+
+mat-card-content {
+  height: calc(100% - 60px);
+}
+
+.card-content {
+  height: 100%;
+}
+
+.form {
+  height: 100%;
+}
+
+.body-content {
+  height: 100%;
+}
+
+.canceled{
+    color:#FF0000;
+}
+.attend {
+  color: #008000;
+}

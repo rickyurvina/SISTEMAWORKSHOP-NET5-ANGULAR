@@ -1,0 +1,91 @@
+.titleDialog {
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  right: 0px;
+  background-color: #000000;
+  top: 0px;
+}
+
+.btnClose {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+}
+
+.titleTextDialog {
+  color: #FFFFFF;
+  height: 48px;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.contentDialog {
+  padding-top: 64px;
+  height: calc(100% - 64px);
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+.content {
+  //  min-width: 945px;
+}
+
+.body-content {
+  height: 100%;
+}
+
+table {
+  width: 100%;
+  //min-width: 1000px;
+}
+
+th {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.table-container {
+  position: relative;
+  overflow: auto;
+  height: calc(100% - 56px);
+}
+
+.table-container-wrap {
+  height: calc(100% - 178px);
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+mat-card {
+  padding: 0px;
+  height: 100%;
+}
+
+mat-card-content {
+  height: calc(100% - 60px);
+}
+
+.card-content {
+  height: 100%;
+}
+
+.form {
+  height: 100%;
+}
+
+.actions {  
+}
+
+.highlight {
+  background: rgba(0,0,0,8%);
+}

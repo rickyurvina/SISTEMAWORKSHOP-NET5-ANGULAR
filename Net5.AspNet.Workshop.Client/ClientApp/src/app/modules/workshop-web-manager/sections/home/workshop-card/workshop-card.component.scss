@@ -1,0 +1,40 @@
+.wrap{
+    width:275px;
+    height:500px;
+}
+
+.card{
+    height:100%;
+    padding:0px;
+}
+
+.content{
+    height:100%;
+}
+
+.details{
+    padding:24px;
+}
+
+.instructor{
+    font-size:11px;
+    padding-top:10px;
+}
+
+.btnInformation {
+  background-color: #ffa500;
+  color: #000000;
+}
+
+.wrap-img {
+  background-color: #808080;
+  position:relative;
+}
+
+.img{
+    width:100%;
+    position:absolute;
+    transform:translate(-50%, -50%);
+    left:50%;
+    top:50%;
+}

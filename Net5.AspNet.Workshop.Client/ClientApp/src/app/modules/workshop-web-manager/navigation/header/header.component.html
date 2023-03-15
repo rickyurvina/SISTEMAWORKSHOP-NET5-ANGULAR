@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <div>
+    <a mat-icon-button routerLink="/workshop-web-manager/home"><mat-icon>school</mat-icon></a>
+  </div>
+  <div>
+    <a routerLink="/workshop-web-manager/home">WORKSHOPAPP</a>
+  </div>
+  <span class="spacer"></span>
+  <div [matMenuTriggerFor]="accountMenu" class="userName">
+    {{user.UserName.toUpperCase()}}
+  </div>
+  <div>
+    <button mat-icon-button [matMenuTriggerFor]="accountMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #accountMenu="matMenu">
+      <button mat-menu-item *ngIf="user.UserName">
+        <mat-icon>face</mat-icon>
+        <span>{{user.FullName}}</span>
+      </button>
+      <button *ngIf="isAdmin()" mat-menu-item routerLink="/workshop-manager/home">
+        <mat-icon>manage_accounts</mat-icon>
+        <span>Manage</span>
+      </button>
+      <mat-divider *ngIf="user.UserName"></mat-divider>
+      <button *ngIf="user.UserName" mat-menu-item (click)="signOut($event)">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+      <button *ngIf="!user.UserName" mat-menu-item routerLink="/security-manager/login">
+        <mat-icon>login</mat-icon>
+        <span>Login</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+

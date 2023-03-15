@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <div>
+    <a mat-icon-button routerLink="/workshop-web-manager/home"><mat-icon>school</mat-icon></a>
+  </div>
+  <div routerLink="/workshop-web-manager/home" style="cursor:pointer;">
+    WORKSHOPAPP
+  </div>
+</mat-toolbar>
+
+<div flex style="height: -webkit-calc(100% - 64px)">
+  <div fxLayout="row" flex layout-fill style="height: 100%">
+    <div fxFlex class="bg-cover"></div>
+    <div fxFlexOffset="none">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,44 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "LocationContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Infrastructure\/Data\/Contexts",
+   "OutputPath": "Infrastructure\/Data\/Entities",
+   "ProjectRootNamespace": "Net5.AspNet.Workshop.Location.Api",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[Workshop].[Department]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[District]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Workshop].[Province]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "sqlserver-aspnet.Net5.AspNet.Workshop.Database",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

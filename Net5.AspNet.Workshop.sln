@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Net5.AspNet.Workshop.Database", "Net5.AspNet.Workshop.Database\Net5.AspNet.Workshop.Database.sqlproj", "{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.AspNet.Workshop.Client", "Net5.AspNet.Workshop.Client\Net5.AspNet.Workshop.Client.csproj", "{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.AspNet.Workshop.IdentityProvider", "Net5.AspNet.Workshop.IdentityProvider\Net5.AspNet.Workshop.IdentityProvider.csproj", "{5012BCE1-81BE-45D5-85DF-F210A1E98934}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.AspNet.Workshop.Infrastructure", "Net5.AspNet.Workshop.Infrastructure\Net5.AspNet.Workshop.Infrastructure.csproj", "{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net5.AspNet.Workshop.IdentityProvider.Api", "Net5.AspNet.Workshop.IdentityProvider.Api\Net5.AspNet.Workshop.IdentityProvider.Api.csproj", "{8249CC46-6C27-4F2F-9160-1360A03FB759}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{48E05F0B-0AEB-4782-AAEC-48BF21E29A12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Distributed Services", "02 - Distributed Services", "{ADBEE7C3-885A-4785-988F-022408AEFF79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Identity Provider", "03 - Identity Provider", "{F2061BA2-9317-4906-9C78-F4E82040B74D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure", "04 - Infrastructure", "{FF1E2FC2-D121-4B95-8A9E-AC41956272F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Database", "05 - Database", "{C12FFB47-46F9-44F0-AD2D-F920E13B6431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net5.AspNet.Workshop.Location.Api", "Net5.AspNet.Workshop.Location.Api\Net5.AspNet.Workshop.Location.Api.csproj", "{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net5.AspNet.Workshop.Workshop.Api", "Net5.AspNet.Workshop.Workshop.Api\Net5.AspNet.Workshop.Workshop.Api.csproj", "{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5012BCE1-81BE-45D5-85DF-F210A1E98934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5012BCE1-81BE-45D5-85DF-F210A1E98934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5012BCE1-81BE-45D5-85DF-F210A1E98934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5012BCE1-81BE-45D5-85DF-F210A1E98934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8249CC46-6C27-4F2F-9160-1360A03FB759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8249CC46-6C27-4F2F-9160-1360A03FB759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8249CC46-6C27-4F2F-9160-1360A03FB759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8249CC46-6C27-4F2F-9160-1360A03FB759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22D04B2E-7205-4EEE-88FB-E8538AC63CAF} = {C12FFB47-46F9-44F0-AD2D-F920E13B6431}
+		{A65FBECD-0A48-42A1-B7B4-CECA969EEAD0} = {48E05F0B-0AEB-4782-AAEC-48BF21E29A12}
+		{5012BCE1-81BE-45D5-85DF-F210A1E98934} = {F2061BA2-9317-4906-9C78-F4E82040B74D}
+		{7ED8B8A2-85AF-4B37-9E2E-4C88D630372F} = {FF1E2FC2-D121-4B95-8A9E-AC41956272F6}
+		{8249CC46-6C27-4F2F-9160-1360A03FB759} = {F2061BA2-9317-4906-9C78-F4E82040B74D}
+		{3261CF4C-78DC-438E-A7A2-8FDD6DEA6430} = {ADBEE7C3-885A-4785-988F-022408AEFF79}
+		{AE1A3D37-4B08-4D79-BA07-BE7D9D52B25A} = {ADBEE7C3-885A-4785-988F-022408AEFF79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5996F0B6-E040-433D-830A-89421B4BC08D}
+	EndGlobalSection
+EndGlobal
